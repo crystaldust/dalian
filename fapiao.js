@@ -1,0 +1,20 @@
+module.exports = [
+{ company : 'A', money :  11871.65  },  
+{ company : 'B', money :  1180    },  
+{ company : 'C', money :  34010   },  
+{ company : 'D', money :  93722.78  },    
+{ company : 'E', money :  4980    },  
+{ company : 'F', money :  11275   },  
+{ company : 'G', money :  11024   },  
+{ company : 'H', money :  8000    },  
+{ company : 'I', money :  9045    },  
+{ company : 'J', money :  930     },
+{ company : 'K', money :  480     },
+{ company : 'L', money :  78288.25  },    
+{ company : 'M', money :  2000    },  
+{ company : 'N', money :  2033.3    },  
+{ company : 'O', money :  98700   },  
+{ company : 'P', money :  13800   },  
+{ company : 'Q', money :  4173    },  
+{ company : 'R', money :  11395.48  } 
+]
