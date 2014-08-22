@@ -22,8 +22,8 @@ Company.prototype.testItem = function( item ) {
 
 	var status = self.status;
 
-	if( Math.abs( predict - self.money ) / self.money > 0.1 ) {
-	//if( Math.abs( predict - self.money ) > 1000 ) {
+	//if( Math.abs( predict - self.money ) / self.money > 0.1 ) {
+	if( Math.abs( predict - self.money ) > 100 ) {
 		if( predict < self.money ) {
 			status = STATUS_HUNGERY;
 		}
@@ -41,12 +41,22 @@ Company.prototype.testItem = function( item ) {
 
 Company.prototype.digestItem = function( item ) {
 	var self = this;
-	console.log( 'currentMoney: ' + self.currentMoney );
-	console.log( 'digesting ' + item.price)
-
-	self.currentMoney += item.price;
-	console.log( 'currentMoney: ' + self.currentMoney + '\n');
 	
+	self.currentMoney += item.price;
+	
+
+	if( Math.abs( self.currentMoney - self.money ) > 500 ) {
+		if( self.currentMoney < self.money ) {
+			self.status = STATUS_HUNGERY;
+		}
+		else {
+			self.status = STATSU_TOO_MUCH;
+		}
+	}
+	else {
+		self.status = STATUS_SATISFIED;
+	}
+
 	// console.log( self.currentMoney );
 	// console.log( 'digest' );
 	self.items.push( item );
